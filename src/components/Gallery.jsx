@@ -2,8 +2,8 @@ import { Form } from "./Form"
 import { Grid } from "./Grid"
 
 
-export const Gallery = () => {
 
+export const Gallery = () => {
 
     return (
 
