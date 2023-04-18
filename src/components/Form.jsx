@@ -1,40 +1,14 @@
-import { useState } from "react";
+import { useForm } from "../hooks/useForm"
+
 
 
 export const Form = () => {
 
-    const [formulario, setFormulario] = useState('');
-
-
-
-    const handleSubmit = (ev) => {
-
-        ev.preventDefault()
-
-        const data = ev.target.task.value
-
-        setFormulario(data)
-        //onNewTask(data)
-
-    }
-
-    const handleChange = ({ target }) => {
-
-        const { name, value } = target
-
-        if (formulario == '') return
-
-        setFormulario({
-
-            ...formulario,
-            [name]: value
-        })
-
-    }
-
-
+ 
+    const {handleChange,handleSubmit, serializa} = useForm('')
 
     return (
+
         <>
 
             <form onSubmit={handleSubmit}>
@@ -70,6 +44,42 @@ export const Form = () => {
 
         </>
 
-
     )
 }
+
+
+
+
+   // const [formulario, setFormulario] = useState('');
+
+    // const handleSubmit = (ev) => {
+
+    //     ev.preventDefault()
+
+    //     const data = {
+
+    //         task: ev.target.task.value,
+    //         description: ev.target.description.value
+
+    //     }
+
+    //     setFormulario(data)
+    //     //onNewTask(data)
+    //     console.log(data)
+        
+    // }
+
+    // const handleChange = ({ target }) => {
+
+    //     const { name, value } = target
+
+    //     if (formulario == '') return
+
+    //     setFormulario({
+
+    //         ...formulario,
+    //         [name]: value
+
+    //     })
+
+    // }

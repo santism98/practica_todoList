@@ -1,25 +1,29 @@
+
+
 import { Task } from "./Task"
 
 
+
 export const Grid = () => {
+
+
     return (
         <>
             
 
                 <h2 className="categoria text-left"> PRUEBA</h2>
 
-                {
-                    //   isLoading 
-                }
 
                 <div className="divTask">
 
-                    <Task />
+                    <Task /> 
+                   
+                    {/* key={formulario.task} {...formulario}  */}
 
                 </div>
 
 
-                {/* {task.map((card) => (
+                {/* {task.map((task) => (
 
 
         ))
