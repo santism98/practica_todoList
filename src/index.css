@@ -34,6 +34,10 @@
   text-align: left;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .justify-text {
   text-align: justify;
 }
@@ -44,6 +48,10 @@
 
 .self-left {
   justify-self: left;
+}
+
+.self-right {
+  justify-self: right;
 }
 
 .header {
@@ -57,23 +65,28 @@
   margin: 2% 5%;
 }
 
-.border-bottom {
-  border-bottom: 1px solid var(--dark);
+.task {
+  align-items: center;
+  width: 100%;
+  margin: 1% 0;
+  padding: 1% 5%;
+  height: 30px;
+  justify-content: space-between;
 }
 
-.task {
+.divTask {
   border: 1px solid var(--dark) ;
-  align-items: center;
-  width: 80%;
-  margin: 1% 0;
-  height: 30px;
+  width: 90%;
   border-radius: 5px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
 }
 
 form {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 5%;
+  margin: 1% 5%;
 }
 
 
@@ -100,7 +113,7 @@ textarea[type="text"] {
 }
 
 footer{
-  margin-top: 4%;
+  margin-top: 3%;
 }
 
 @media screen and (max-width: 768px) {

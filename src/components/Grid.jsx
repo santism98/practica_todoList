@@ -2,26 +2,31 @@ import { Task } from "./Task"
 
 
 export const Grid = () => {
-  return (
-    <>
-      <div>
+    return (
+        <>
+            
 
-        <h2 className="categoria text-left"> PRUEBA</h2>
+                <h2 className="categoria text-left"> PRUEBA</h2>
 
-        {
-        //   isLoading 
-        }
+                {
+                    //   isLoading 
+                }
 
-        <Task/>
+                <div className="divTask">
 
-        {/* {task.map((card) => (
+                    <Task />
+
+                </div>
+
+
+                {/* {task.map((card) => (
 
 
         ))
         } */}
 
-      </div>
-    </>
+            
+        </>
 
-  )
+    )
 }
