@@ -1,7 +1,15 @@
 
 
 export const ServicesPage = () => {
-  return (
-    <div>ServicesPage</div>
-  )
+
+    return (
+
+
+        <>
+            <div>Página de servicios</div>
+        </>
+
+
+    )
+
 }

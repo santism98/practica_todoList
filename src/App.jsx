@@ -18,7 +18,7 @@ function App() {
       <main className='text-center header'>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='servicios' element={<ServicesPage />} />
+          <Route path='services' element={<ServicesPage />} />
           <Route path='form' element={<Gallery />} />
           <Route path='login' element={<LoginPage />} />
 
