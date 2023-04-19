@@ -10,9 +10,9 @@ export const todoReducer = (state = [], action) => {
 
         case '[TODO] delete todo':
 
-            console.log(action.payload)
+            const newState = state.filter(todo => todo.id !== action.payload.id);
 
-            return state.filter(todo => todo.id !== action.payload.id);
+            return newState
 
         case '[TODO] toggle todo':
 
