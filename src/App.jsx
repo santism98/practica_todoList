@@ -1,5 +1,5 @@
 import { Gallery } from "./components/Gallery"
-
+import {} from './components'
 
 function App() {
 
