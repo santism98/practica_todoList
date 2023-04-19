@@ -1,35 +1,26 @@
-
-
 import { Task } from "./Task"
 
+export const Grid = ({todos}) => {
 
-
-export const Grid = () => {
-
+    console.log(todos)
 
     return (
+
         <>
-            
 
-                <h2 className="categoria text-left"> PRUEBA</h2>
+            <h2 className="categoria text-left"> PRUEBA</h2>
 
+            <div className="divTask">
 
-                <div className="divTask">
+                {todos.map((task) => (
 
-                    <Task /> 
-                   
-                    {/* key={formulario.task} {...formulario}  */}
+                    <Task key={task.id} {...task} />
 
-                </div>
+                ))
+                }
 
+            </div>
 
-                {/* {task.map((task) => (
-
-
-        ))
-        } */}
-
-            
         </>
 
     )

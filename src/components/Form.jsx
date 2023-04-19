@@ -1,9 +1,28 @@
 import { useForm } from "../hooks/useForm"
 
 
-export const Form = ({getTarea}) => {
+export const Form = ({handleNewTodo}) => {
 
-    const {formulario,handleChange,handleSubmit}=useForm('')
+    const { handleChange }=useForm('');
+
+    const handleSubmit = (ev) => {
+
+        ev.preventDefault()
+
+        const data = {
+
+            id: Date.now(),
+            task: ev.target.task.value,
+            description: ev.target.description.value,
+            done: false,
+            date: new Date()
+
+        }
+
+        handleNewTodo(data)
+        
+    }
+
 
     return (
 
