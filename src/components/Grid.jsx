@@ -1,9 +1,8 @@
 import { Task } from "./Task"
 
-export const Grid = ({todos}) => {
+export const Grid = ({todos, handleDeleteTodo, handleToggleTodo}) => {
 
-    console.log(todos)
-
+   
     return (
 
         <>
@@ -14,7 +13,7 @@ export const Grid = ({todos}) => {
 
                 {todos.map((task) => (
 
-                    <Task key={task.id} {...task} />
+                    <Task key={task.id} {...task} handleDeleteTodo={handleDeleteTodo} handleToggleTodo={handleToggleTodo}/>
 
                 ))
                 }

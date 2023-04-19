@@ -4,7 +4,7 @@ import { useTodoList } from "../hooks/useTodoList"
 
 export const Gallery = () => {
 
-  const { todos, handleNewTodo} = useTodoList('')
+  const { todos, handleNewTodo, handleDeleteTodo, handleToggleTodo} = useTodoList('')
   
      return (
 
@@ -14,7 +14,7 @@ export const Gallery = () => {
 
             <Form handleNewTodo={handleNewTodo}/>
             
-            <Grid todos={todos} />
+            <Grid todos={todos} handleDeleteTodo={handleDeleteTodo} handleToggleTodo={handleToggleTodo} />
 
         </>
 
