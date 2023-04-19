@@ -1,21 +1,19 @@
-import { useState, useEffect } from "react";
+import { useEffect, useReducer } from "react";
 
 import { todoReducer } from "../reducers/todoReducer";
 
+
+const init = () => {
+
+  const storedTodos = JSON.parse(localStorage.getItem("todos"));
+
+};
+
 export const useTodoList = () => {
 
-  const [todos, setTodos] = useState([]);
 
-  useEffect(() => {
+  const [todos, dispatch] = useReducer(todoReducer, [], init)
 
-    const storedTodos = JSON.parse(localStorage.getItem("todos"));
-
-    if (storedTodos) {
-
-      setTodos(storedTodos);
-
-    }
-  }, []);
 
   useEffect(() => {
 
@@ -23,23 +21,25 @@ export const useTodoList = () => {
 
   }, [todos]);
 
-  const addTodo = (data) => {
 
-    setTodos((prevTodos) =>
+  const addTodo = () => {
 
-      todoReducer(prevTodos, {
+    const action = {
 
-        type: "[TODO] add todo",
+      type: "[TODO] add todo",
 
-        payload: data,
-        
-      })
-    );
+      payload: data,
+
+    }
+
+    dispatch(action)
+
   };
 
 
 
   return {
+
     todos,
     addTodo,
 

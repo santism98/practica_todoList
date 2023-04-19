@@ -1,7 +1,7 @@
 import { useForm } from "../hooks/useForm"
 
 
-export const Form = () => {
+export const Form = ({getTarea}) => {
 
     const {formulario,handleChange,handleSubmit}=useForm('')
 
