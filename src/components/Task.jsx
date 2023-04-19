@@ -12,10 +12,12 @@ export const Task = ({ task, description, id, done, handleDeleteTodo, handleTogg
 
     }
 
+
     return (
 
         <>
             
+
             <div className="task flex self-left">
 
                 <p>{task}</p>
@@ -24,10 +26,12 @@ export const Task = ({ task, description, id, done, handleDeleteTodo, handleTogg
                 <div className="flex self-right">
 
                     <button
+
                     className={done.toString()}
                     onClick={() => handleToggleTodo(id, done)}
                     >{`${boton}`}</button>
                     
+
                     <button
                     className="delete"
                     onClick={() => handleDeleteTodo(id)}
