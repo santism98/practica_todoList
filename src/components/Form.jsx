@@ -1,12 +1,9 @@
-
 import { useForm } from "../hooks/useForm"
-
 
 
 export const Form = () => {
 
- 
-    const {handleChange,handleSubmit, serializa} = useForm('')
+    const {formulario,handleChange,handleSubmit}=useForm('')
 
     return (
 

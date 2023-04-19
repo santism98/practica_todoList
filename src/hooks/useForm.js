@@ -11,14 +11,15 @@ export const useForm = (estadoInicial) => {
 
         const data = {
 
+            id: Date.now(),
             task: ev.target.task.value,
-            description: ev.target.description.value
-            
+            description: ev.target.description.value,
+            done: false,
+            date: new Date()
+
         }
 
-
         setFormulario(data)
-        console.log(data)
 
     }
 
@@ -42,6 +43,7 @@ export const useForm = (estadoInicial) => {
         formulario,
         handleChange,
         handleSubmit,
+
 
     }
 
