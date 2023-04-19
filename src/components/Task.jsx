@@ -4,7 +4,7 @@ export const Task = ({ task, description, id, done, handleDeleteTodo, handleTogg
 
     if (done == true) {
 
-        boton = 'COMPLETADO'
+        boton = 'FINALIZADO'
 
     } else {
 
@@ -24,11 +24,12 @@ export const Task = ({ task, description, id, done, handleDeleteTodo, handleTogg
                 <div className="flex self-right">
 
                     <button
-
+                    className={done.toString()}
                     onClick={() => handleToggleTodo(id, done)}
                     >{`${boton}`}</button>
                     
                     <button
+                    className="delete"
                     onClick={() => handleDeleteTodo(id)}
                     >Eliminar</button>
 
