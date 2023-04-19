@@ -1,5 +1,5 @@
-import { Gallery } from "./components/Gallery"
-
+import { Route, Routes, Navigate } from 'react-router-dom'
+import { HomePage, LoginPage, ServicesPage, NavBar, Gallery } from './components'
 
 function App() {
 
@@ -13,11 +13,18 @@ function App() {
 
       </header>
 
+      <NavBar />
+
       <main className='text-center header'>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='services' element={<ServicesPage />} />
+          <Route path='form' element={<Gallery />} />
+          <Route path='login' element={<LoginPage />} />
 
-        <h2>Lista de tareas</h2>
-
-        <Gallery />
+          {/* <Route path='/*' element={<LoginPage />} /> */}
+          <Route path='/*' element={<Navigate to={'/'} />} />
+        </Routes>
 
       </main>
 

@@ -1,35 +1,40 @@
+export const Task = ({ task, description, id, done, handleDeleteTodo, handleToggleTodo }) => {
 
+    let boton = ''
 
-export const Task = ({task,description, id, done, handleDeleteTodo, handleToggleTodo}) => {
-      
+    if (done == true) {
 
-    let boton= ''
-    if(done==true){
-        boton='COMPLETADO'
-    }else{
-        boton='PENDIENTE'
+        boton = 'FINALIZADO'
+
+    } else {
+
+        boton = 'PENDIENTE'
+
     }
 
-    
+
     return (
 
         <>
-        
+            
 
             <div className="task flex self-left">
-                
+
                 <p>{task}</p>
                 <p>{description}</p>
 
                 <div className="flex self-right">
 
                     <button
-                    onClick={()=>handleToggleTodo(id,done)}
-                    >{`${boton}`}</button>
 
+                    className={done.toString()}
+                    onClick={() => handleToggleTodo(id, done)}
+                    >{`${boton}`}</button>
+                    
 
                     <button
-                    onClick={()=>handleDeleteTodo(id)}
+                    className="delete"
+                    onClick={() => handleDeleteTodo(id)}
                     >Eliminar</button>
 
                 </div>
@@ -37,6 +42,5 @@ export const Task = ({task,description, id, done, handleDeleteTodo, handleToggle
             </div>
 
         </>
-
     )
 }

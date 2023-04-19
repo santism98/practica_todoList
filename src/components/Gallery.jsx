@@ -9,6 +9,7 @@ export const Gallery = () => {
      return (
 
         <>
+            <h2>Lista de tareas</h2>
 
             <h2 className="categoria text-left">Añadir Tarea</h2>
 

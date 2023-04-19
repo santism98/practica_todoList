@@ -116,6 +116,60 @@ footer{
   margin-top: 3%;
 }
 
+.isActive {
+  color: red;
+}
+
+.navbar {
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.login>input[type="text"],
+.login>input[type="submit"] {
+  width: 100%;
+  margin: 1% 0;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.login {
+  margin: 0 auto
+}
+
+button {
+  margin-left: 20px;
+  padding: 3%;
+  background-color: var(--greenlight);
+  border-radius: 5px;
+  border: solid var(--greendark);
+  color: white;
+}
+button.delete {
+  background-color: var(--rojo);
+  border: solid var(--rojo)ed;
+}
+
+button.true {
+  border: solid var(--dark);
+  background-color: var(--dark);
+}
+
 @media screen and (max-width: 768px) {
 
 
