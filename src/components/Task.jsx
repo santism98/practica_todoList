@@ -2,9 +2,19 @@
 
 export const Task = ({task,description, id, done, handleDeleteTodo, handleToggleTodo}) => {
       
+
+    let boton= ''
+    if(done==true){
+        boton='COMPLETADO'
+    }else{
+        boton='PENDIENTE'
+    }
+
+    
     return (
 
         <>
+        
 
             <div className="task flex self-left">
                 
@@ -15,7 +25,7 @@ export const Task = ({task,description, id, done, handleDeleteTodo, handleToggle
 
                     <button
                     onClick={()=>handleToggleTodo(id,done)}
-                    >Pendiente</button>
+                    >{`${boton}`}</button>
 
 
                     <button
