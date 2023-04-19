@@ -154,7 +154,7 @@ footer{
 
 button {
   margin-left: 20px;
-  margin-right: 20px;
+  padding: 3%;
   background-color: var(--greenlight);
   border-radius: 5px;
   border: solid var(--greendark);
