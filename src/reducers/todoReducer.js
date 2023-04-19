@@ -14,21 +14,28 @@ export const todoReducer = (state = [], action) => {
             return newState
 
         case '[TODO] toggle todo':
-            console.log(id)
-            const newToggle = state.map(todo=>{ 
 
-                if(todo === todo.id){
+            const newToggle = state.map(todo => {
 
-                    todo.done = !todo.done
+                if (todo.id === action.payload) {
 
-                }}
-                )
-                
+                    return {
+                        ...todo,
+                        done: !todo.done
+                    }
+
+                } else {
+
+                    return todo
+
+                }
+            })
+            console.log(newToggle)
             return newToggle
-
+           
         default:
 
             return state
-            
+
     }
 }
